@@ -16,8 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from tracks.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('tracks.urls')),
+    path('tracks/', include('tracks.urls')),
+    path('', index, name='index')
 ]

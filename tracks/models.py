@@ -8,7 +8,7 @@ class MusicTrack(models.Model):
     genre = models.CharField(max_length=50)
     release_date = models.DateField()
     duration = models.DurationField()
-    cover_image = models.ImageField(upload_to='cover_images/')
+    cover_image = models.ImageField(upload_to='cover_images/', null=True, blank=True)
     audio_file = models.FileField(upload_to='audio_file/')
 
     def get_detail_url(self):

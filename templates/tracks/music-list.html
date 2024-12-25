@@ -1,4 +1,4 @@
-{% extends 'tracks/base.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
 <h1>Music List</h1>
@@ -9,5 +9,5 @@
         <li>No tracks available.</li>
     {% endfor %}
 </ul>
-<a href="{% url 'music_create' %}">Add New Track</a>
+<a href="{% url 'index' %}">Add New Track</a>
 {% endblock %}
