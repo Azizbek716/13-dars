@@ -1,0 +1,11 @@
+{% extends 'tracks/base.html' %}
+
+{% block content %}
+<h1>{{ track.title }}</h1>
+<p><strong>Artist:</strong> {{ track.artist }}</p>
+<p><strong>Genre:</strong> {{ track.genre }}</p>
+<p><strong>Release Date:</strong> {{ track.release_date }}</p>
+<p><strong>Duration:</strong> {{ track.duration }}</p>
+<a href="{% url 'music_update' track.id %}">Edit</a>
+<a href="{% url 'music_delete' track.id %}">Delete</a>
+{% endblock %}
